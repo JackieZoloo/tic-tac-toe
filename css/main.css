@@ -1,0 +1,62 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  #reset, h2{
+      display: inline;
+      margin: 0 auto;
+  }
+  #reset {
+      width: 80px;
+      height: 30px;
+  }
+  .nav {
+      text-align: center;
+      margin-bottom: 40px;
+  }
+  a {
+      text-decoration: none;
+      font-size: 40px;
+      color: black;
+      margin: 0 30px;
+
+  }
+  .container {
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+      display: grid;
+	  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+
+  }
+  .square {
+      border: solid 2px black;
+      text-align: center;
+      padding: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 50px;
+  }
+  .top {
+      border-top: none;
+  }
+  .left {
+      border-left: none;
+  }
+  .bottom {
+      border-bottom: none;
+  }
+  .right {
+      border-right: none;
+  }
+  h1, h2{
+      text-align: center;
+      margin: 20px;
+  }
+  span {
+      font-size: 50px;
+      margin: 20px;
+  }
+  #winner{
+      font-size: 60px;
+  }
