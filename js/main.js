@@ -28,39 +28,33 @@ playerOne.addEventListener("click", function(){
 })
 
 reset.addEventListener("click", function(){
-    boards.forEach(board => board.innerHTML = "");
+    squares.forEach(board => board.innerHTML = "");
 })
+const divs = [
+    [null, null, null],
+    [null, null, null],
+    [null, null, null]
+]
 
 
 
-const boards = document.querySelectorAll(".square");
-
-squares.forEach(board => {
-    board.addEventListener('click', function(){
+squares.forEach(function(square, index){
+    square.addEventListener('click', function(){
+            let numbers = square.id.split("");
+            let indexOne = Number(numbers[0]);
+            let indexTwo = Number(numbers[1]);
+            console.log(indexOne, indexTwo);
         if(player === playerFirst) {
-            board.innerHTML = playerFirst;
+            square.innerHTML = playerFirst;
             player = playerSecond;
+            divs[indexOne][indexTwo] = 1;
+            console.log(divs);
         } else if (player === playerSecond) {
-            board.innerHTML = playerSecond;
+            square.innerHTML = playerSecond;
             player = playerFirst;
+            divs[indexOne][indexTwo] = -1;
+            console.log(divs);
         }
     })
   })
-//   function myFunction() {
-//     var x = document.getElementById("myDIV");
-//     if (x.style.display === "none") {
-//       x.style.display = "block";
-//     } else {
-//       x.style.display = "none";
-//     }
-//   }
-// var player_one = 1;
-// function display_input(square){ 
-//     if ( player_one == 1 ){
-//         document.getElementById(square).innerHTML = "X";
-//         player_one = 0;
-//     } else {
-//         document.getElementById(square).innerHTML = "O";    
-//         player_one = 1;
-//     }   
-// }
+ 
